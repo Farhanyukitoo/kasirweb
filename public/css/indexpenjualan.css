@@ -1,0 +1,297 @@
+/* Main Styles for Daftar Penjualan Page */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --text-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --dark-color: #34495e;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: #f5f7fa;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+h1 {
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+h1 i {
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+/* Alert Styles */
+.alert-success {
+  background-color: rgba(46, 204, 113, 0.2);
+  border-left: 4px solid var(--secondary-color);
+  color: #27ae60;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+.btn i {
+  margin-right: 6px;
+}
+
+.btn-success {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+.btn-info {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+/* Table Styles */
+.table-container {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+thead {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+thead th:first-child {
+  border-top-left-radius: var(--border-radius);
+}
+
+thead th:last-child {
+  border-top-right-radius: var(--border-radius);
+}
+
+tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: var(--transition);
+}
+
+tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* Icon styling */
+th i {
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+/* Spacing utility */
+.jrk {
+  height: 1.5rem;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Pagination Styles */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination nav {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination svg {
+  width: 20px;
+}
+
+.pagination span, .pagination a {
+  margin: 0 3px;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.pagination a {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pagination a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.pagination .active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-container {
+    padding: 1rem;
+  }
+  
+  th, td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
+  }
+  
+  h1 {
+    font-size: 1.7rem;
+  }
+  
+  .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .btn-success {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Add animation for table rows */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+tbody tr {
+  animation: fadeIn 0.3s ease forwards;
+  animation-delay: calc(0.05s * var(--row-index, 0));
+  opacity: 0;
+}
+
+/* Add custom styles for the price and total columns */
+td:nth-child(3), td:nth-child(6) {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Add different colors for stock levels */
+[data-stock-level="low"] {
+  color: var(--danger-color);
+  font-weight: 600;
+}
+
+[data-stock-level="medium"] {
+  color: #f39c12;
+  font-weight: 600;
+}
+
+[data-stock-level="high"] {
+  color: var(--secondary-color);
+  font-weight: 600;
+}

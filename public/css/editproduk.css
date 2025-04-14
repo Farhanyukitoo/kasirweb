@@ -1,0 +1,187 @@
+/* Main styling for edit product form */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Form header */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #182848;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eaeaea;
+    text-align: center;
+    position: relative;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(45deg, #4b6cb7, #182848);
+}
+
+/* Form styling */
+.mb-3 {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4b6cb7;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #4b6cb7;
+    box-shadow: 0 0 0 3px rgba(75, 108, 183, 0.25);
+    outline: none;
+}
+
+/* File input styling */
+input[type="file"].form-control {
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+/* Image preview styling */
+.img-thumbnail {
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
+    padding: 5px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Current image text */
+p.mt-2 {
+    font-weight: 500;
+    color: #4b6cb7;
+    margin-bottom: 8px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #4b6cb7, #182848);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #3f5a9a, #0f1a36);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #6c757d, #5a6268);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(45deg, #5a6268, #494f54);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Error handling */
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mb-3 {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.mb-3:nth-child(1) { animation-delay: 0.1s; }
+.mb-3:nth-child(2) { animation-delay: 0.2s; }
+.mb-3:nth-child(3) { animation-delay: 0.3s; }
+.mb-3:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .form-control {
+        padding: 10px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+/* Custom transitions */
+.form-control, .btn {
+    will-change: transform;
+}
+
+/* Focus visible outline for accessibility */
+.form-control:focus-visible {
+    outline: 2px solid #4b6cb7;
+    outline-offset: 1px;
+}

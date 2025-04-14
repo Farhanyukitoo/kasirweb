@@ -1,0 +1,241 @@
+/* Main styling for product page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header styling */
+.daftarproduk {
+    background: linear-gradient(45deg, #4b6cb7, #182848);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.daftarproduk i {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.jarakz {
+    height: 20px;
+}
+
+/* Filter section styling */
+.form-label {
+    font-weight: 500;
+    color: #4b6cb7;
+}
+
+.form-select {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.form-select:focus {
+    border-color: #4b6cb7;
+    box-shadow: 0 0 0 0.25rem rgba(75, 108, 183, 0.25);
+}
+
+/* Button styling */
+.btn-primary {
+    background: linear-gradient(45deg, #4b6cb7, #182848);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #364f88, #0f1a36);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tambah {
+    margin: 20px 0;
+}
+
+/* Table styling */
+.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table thead {
+    background: linear-gradient(45deg, #4b6cb7, #182848);
+    color: white;
+}
+
+.table th {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+}
+
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:hover {
+    background-color: #f5f8ff;
+}
+
+/* Product image styling */
+.table img {
+    border-radius: 6px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    object-fit: cover;
+    height: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table img:hover {
+    transform: scale(1.05);
+}
+
+/* Action buttons styling */
+.btn-info, .btn-warning, .btn-danger {
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin: 2px;
+    transition: all 0.3s;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-info:hover, .btn-warning:hover, .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.khusus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Modal styling */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-container {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+#modal-description {
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+#modal-product-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#modal-product-price {
+    font-size: 18px;
+    color: #4b6cb7;
+    font-weight: 500;
+}
+
+/* Alert styling */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: opacity 0.5s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .daftarproduk {
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    .khusus {
+        flex-direction: column;
+    }
+    
+    .table th, .table td {
+        padding: 10px;
+    }
+    
+    .modal-container {
+        max-width: 95%;
+    }
+}
